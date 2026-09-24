@@ -1,0 +1,138 @@
+.cart {
+  margin-top: 100px;
+}
+
+/* টেবিলের হেডার এবং আইটেম রো-এর জন্য ৬ কলামের গ্রিড */
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  color: #808080;
+  font-size: max(1vw, 12px);
+}
+
+/* প্রতিটি খাবারের রো বা আইটেম স্টাইলিং */
+.cart-items-item {
+  margin: 10px 0px;
+  color: black;
+}
+
+/* খাবারের ছবির সাইজ ঠিক করার জন্য */
+.cart-items-item img {
+  width: 50px;
+  border-radius: 4px;
+}
+
+/* প্রতি লাইনের নিচের চিকন দাগ বা বর্ডার */
+.cart hr {
+  height: 1px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+/* ক্রস (x) বাটনের স্টাইলিং */
+.cart-items-item .cross {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cart-items-item .cross:hover {
+  color: tomato;
+}
+
+/* নিচের পুরো সেকশনটিকে পাশাপাশি সাজানোর জন্য */
+.cart-bottom {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: max(12vw, 20px);
+}
+
+/* বাম পাশের কার্ট টোটাল বক্স */
+.cart-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-total h2 {
+  color: black;
+  font-weight: 600;
+}
+
+/* সাবটোটাল, ডেলিভারি ফি এবং টোটাল লাইন দুই পাশে ছড়ানোর জন্য */
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  padding: 10px 0px;
+}
+
+.cart-total hr {
+  margin: 0px;
+}
+
+/* চেকআউট বাটন */
+.cart-total button {
+  border: none;
+  color: white;
+  background-color: tomato;
+  width: max(15vw, 200px);
+  padding: 12px 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+/* ডান পাশের প্রোমো কোড বক্স */
+.cart-promocode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-promocode p {
+  color: #555;
+}
+
+/* প্রোমো কোড ইনপুট বক্সটি সুন্দর করার জন্য */
+.cart-promocode-input {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaeaea; /* ৮ অক্ষরের ভুল কোড ঠিক করে ৬ অক্ষর করা হলো */
+  border-radius: 4px;
+}
+
+.cart-promocode-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  height: 40px;
+  width: 100%;
+}
+
+/* প্রোমো কোড সাবমিট বাটন ২ নম্বর ছবির মতো কালো করা হলো */
+.cart-promocode-input button {
+  width: max(10vw, 150px);
+  padding: 12px 5px;
+  background-color: black; 
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* রেসপনসিভ মিডিয়া কুয়েরি (মোবাইলের জন্য) */
+@media (max-width: 750px) {
+  .cart-bottom {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}

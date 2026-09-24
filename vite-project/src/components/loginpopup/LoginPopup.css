@@ -1,0 +1,86 @@
+/* পুরো স্ক্রিন জুড়ে কালো ঝাপসা ব্যাকগ্রাউন্ড */
+.login-popup {
+  position: fixed;
+  z-index: 999; /* যেন এটি সবকিছুর উপরে থাকে */
+  width: 100%;
+  height: 100%;
+  background-color: #000000a6;
+  top: 0;
+  left: 0;
+  display: grid;
+}
+
+/* মাঝখানের সাদা ফর্ম বক্সটি */
+.login-popup-container {
+  place-self: center;
+  width: max(23vw, 330px);
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* টাইটেল এবং ক্রস (X) বাটন পাশাপাশি রাখার জন্য */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.login-popup-title h2 {
+  font-weight: 600;
+}
+
+.login-popup-title img {
+  width: 16px;
+  cursor: pointer;
+}
+
+/* ইনপুট ফিল্ডগুলো নিচে নিচে সাজানো */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* লগইন / ক্রিয়েট অ্যাকাউন্ট বাটন */
+.login-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: tomato; /* আপনার থিম কালার */
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* চেকবক্স এবং টেক্সট পাশাপাশি রাখা */
+.login-popup-condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+/* নিচের সুইচিং টেক্সট লিংক */
+.login-popup p span {
+  color: tomato;
+  font-weight: 500;
+  cursor: pointer;
+}

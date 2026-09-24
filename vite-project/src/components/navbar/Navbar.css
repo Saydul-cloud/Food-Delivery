@@ -1,0 +1,162 @@
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  width: 150px;
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;   
+}
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.navbar button:hover {
+  background-color: #fff4f2;
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+.navbar li {
+  cursor: pointer;
+}
+.navbar-search-icon {
+  position: relative;
+}
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;   
+}
+
+/* =======================================================
+   প্রোফাইল এবং ড্রপডাউন সিএসএস (মিডিয়া কুয়েরির বাইরে আনা হলো)
+   ======================================================= */
+
+/* প্রোফাইল আইকনের মূল কন্টেইনার */
+.navbar-profile {
+  position: relative !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* প্রোফাইল মেইন আইকনটির সাইজ */
+.navbar-profile > img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* ড্রপডাউন বক্সের মূল ডিজাইন (যা ডট ও ভাঙা লেআউট ঠিক করবে) */
+ul.navbar-profile-dropdown {
+  position: absolute !important;
+  right: 0 !important;
+  top: 40px !important; /* আইকন থেকে নিচে নামানোর দূরত্ব */
+  background-color: white !important; /* ব্যাকগ্রাউন্ড সাদা করার জন্য */
+  padding: 15px 20px !important;
+  border-radius: 6px !important;
+  border: 1px solid #e2e2e2 !important; /* হালকা বর্ডার */
+  list-style: none !important; /* পাশের কালো ডট বা বুলেট পয়েন্ট দূর করবে */
+  list-style-type: none !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important; /* সুন্দর হালকা ছায়া */
+  margin: 0 !important;
+  min-width: 140px !important; /* বক্সের মিনিমাম চওড়া */
+}
+
+/* ড্রপডাউনের ভেতরের আইটেম (আইকন এবং টেক্সট পাশাপাশি রাখার জন্য) */
+ul.navbar-profile-dropdown li {
+  display: flex !important;
+  flex-direction: row !important; /* লেখা ও আইকন পাশাপাশি রাখবে */
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+/* ড্রপডাউনের ভেতরের Orders ও Logout আইকনের সাইজ */
+ul.navbar-profile-dropdown li img {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain !important;
+}
+
+/* লেখার সাইজ ও কালার */
+ul.navbar-profile-dropdown li p {
+  font-size: 14px !important;
+  color: #494949 !important;
+  white-space: nowrap !important; /* লেখা যেন এক লাইনে পাশাপাশি থাকে */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* হোভার করলে টেক্সটের কালার পরিবর্তন */
+ul.navbar-profile-dropdown li:hover p {
+  color: tomato !important; /* মাউস নিলে লেখাটি টমেটো কালার হবে */
+}
+
+/* মাঝখানের দাগ বা বর্ডারের স্টাইল */
+ul.navbar-profile-dropdown hr {
+  border: none !important;
+  height: 1px !important;
+  background-color: #ededed !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* =======================================================
+   মিডিয়া কুয়েরি (রেসপনসিভ ডিজাইন এর জন্য)
+   ======================================================= */
+@media (max-width:900px){
+  .navbar .logo{
+    width: 140px;
+  }
+  .navbar-menu{
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right{
+    gap: 20px;  
+  }
+  .navbar-right img{
+    width: 20px;
+  }
+  .navbar-right button{
+    padding: 7px 20px;
+    font-size: 14px;   
+  }
+}
+
+@media (max-width:750px) {
+  .navbar-menu{
+    display: none;
+  }
+}

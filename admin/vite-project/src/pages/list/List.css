@@ -1,0 +1,36 @@
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+}
+
+.list-table-format.title {
+    background-color: #f9f9f9;
+}
+
+.list-table-format img {
+    width: 50px;
+    border-radius: 4px;
+}
+
+.cursor {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+/* ছোট স্ক্রিনের জন্য রেসপনসিভ ডিজাইন */
+@media (max-width: 600px) {
+    .list-table-format {
+        grid-template-columns: 1fr 2fr 1fr;
+        font-size: 12px;
+    }
+    .list-table-format b:nth-child(3),
+    .list-table-format p:nth-child(3) {
+        display: none; /* মোবাইলে ক্যাটাগরি হাইড রাখতে চাইলে */
+    }
+}
