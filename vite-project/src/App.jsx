@@ -9,7 +9,7 @@ import LoginPopup from './components/loginpopup/LoginPopup'
 import Verify from './pages/verify/Verify'
 
 // 💡 ফোল্ডারের আসল বানান অনুযায়ী ইমপোর্ট করুন (MyOrders)
-import MyOrders from './pages/MyOrders/MyOrders' 
+import MyOrders from './pages/myorders/Myorders' 
 
 // React Toastify ইমপোর্ট
 import { ToastContainer } from 'react-toastify'
@@ -35,7 +35,7 @@ const App = () => {
       <Route path='/verify' element={<Verify/>} />
       
       {/* 🛠️ এখানে element এর ভেতর 'MyOrders' এর বানান বড় হাতের 'O' দিয়ে ঠিক করা হলো */}
-      <Route path='/myorders' element={<MyOrders />} /> 
+      <Route path='/MyOrders' element={<MyOrders />} /> 
      </Routes>
     </div>
     <Footer/>
