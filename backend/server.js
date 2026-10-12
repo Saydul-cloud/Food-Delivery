@@ -15,9 +15,7 @@ const port = 4000 // পোর্ট ৪০০ থেকে বাড়িয়ে �
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(cors({
-  origin: "*"
-}));
+app.use(cors());
  
 
 // db connection
