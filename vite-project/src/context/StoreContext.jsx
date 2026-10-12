@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
 
     // 💡 এখানে ডিফল্ট ভ্যালু হিসেবে একটি খালি অবজেক্ট {} নিশ্চিত করা হয়েছে
     const [cartItems, setCartItems] = useState({});
-    const url = "http://localhost:4000";
+    const url = "https://onrender.com";
     const [token, setToken] = useState(""); 
     const [food_list, setFoodList] = useState([]); 
 
